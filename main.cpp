@@ -1,13 +1,14 @@
 #include <cassert>
 #include <iostream>
+#include <QFile>
 #include <SFML/Graphics.hpp>
 
 void check_pixel_color(sf::Color pixel_color, bool &game_screen, bool &game_over_screen, bool &winner_screen);
 
 int main()
 {
-  std::system("copy ..\\MazeGame\\arial.ttf arial.ttf");
-  std::system("copy ..\\MazeGame\\Level.png Level.png");
+  { QFile f(":/files/arial.ttf"); f.copy("arial.ttf"); }
+  { QFile f(":/files/Level.png"); f.copy("Level.png"); }
 
   const int window_height = 600;
   const int window_width = 800;
@@ -17,7 +18,7 @@ int main()
   sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Maze game", sf::Style::Titlebar | sf::Style::Close);
 
   sf::Image level_image;
-  const std::string level("level.png");
+  const std::string level("Level.png");
   assert(level != "");
   if(!level_image.loadFromFile(level))
   {

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>arial.ttf</file>
+        <file>Level.png</file>
+    </qresource>
+</RCC>

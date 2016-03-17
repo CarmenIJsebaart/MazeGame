@@ -1,7 +1,7 @@
 TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
-CONFIG -= qt
+CONFIG += qt
 
 SOURCES += main.cpp
 
@@ -40,3 +40,6 @@ INCLUDEPATH += C:/Qt/Qt5.5.0/5.5/mingw492_32/lib \
   C:/SFML/bin
 
 HEADERS +=
+
+RESOURCES += \
+    mazegame.qrc
